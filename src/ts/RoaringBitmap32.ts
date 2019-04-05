@@ -705,7 +705,7 @@ class RoaringBitmap32 {
       _getPtr(this)
       const roaringArray = new RoaringUint8Array(buffer)
       try {
-        this.deserialize(roaringArray)
+        this.deserialize(roaringArray, portable)
       } finally {
         roaringArray.dispose()
       }
